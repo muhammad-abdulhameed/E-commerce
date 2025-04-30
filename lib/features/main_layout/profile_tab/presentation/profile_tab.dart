@@ -1,3 +1,4 @@
+import 'package:my_ecommerce/core/LocalStorage/prefs_helper.dart';
 import 'package:my_ecommerce/core/resources/assets_manager.dart';
 import 'package:my_ecommerce/core/resources/color_manager.dart';
 import 'package:my_ecommerce/core/resources/font_manager.dart';
@@ -6,7 +7,9 @@ import 'package:my_ecommerce/core/resources/values_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:my_ecommerce/core/routes_manager/routes.dart';
 
+import '../../../../core/widget/custom_elevated_button.dart';
 import '../../../../core/widget/main_text_field.dart';
 import '../../../../core/widget/validators.dart';
 
@@ -170,6 +173,14 @@ class ProfileTabState extends State<ProfileTab> {
                     .copyWith(fontSize: 18.sp),
               ),
               SizedBox(height: AppSize.s50.h),
+              CustomElevatedButton(
+                label: 'LogOut',
+                backgroundColor: ColorManager.error,
+                onTap: () {
+                  PrefsHelper.removeToken();
+                  Navigator.pushReplacementNamed(context,Routes.signInRoute);
+                },
+              ),
             ],
           ),
         ),

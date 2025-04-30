@@ -12,6 +12,7 @@ class CustomElevatedButton extends StatelessWidget {
   final void Function() onTap;
   final TextStyle? textStyle;
   final bool isStadiumBorder;
+ final bool isLoading;
 
   const CustomElevatedButton(
       {super.key,
@@ -22,7 +23,8 @@ class CustomElevatedButton extends StatelessWidget {
       this.radius,
       this.suffixIcon,
       required this.label,
-      required this.onTap});
+      required this.onTap,
+      this.isLoading = false});
 
   @override
   Widget build(BuildContext context) {
@@ -43,12 +45,18 @@ class CustomElevatedButton extends StatelessWidget {
             SizedBox(
               width: 24.w,
             ),
-            Text(
-              label,
-              style: textStyle ??
-                  getMediumStyle(color: ColorManager.white)
-                      .copyWith(fontSize: 20.sp),
-            ),
+            isLoading
+                ? Center(
+                    child: CircularProgressIndicator(
+                      color: ColorManager.primaryDark,
+                    ),
+                  )
+                : Text(
+                    label,
+                    style: textStyle ??
+                        getMediumStyle(color: ColorManager.white)
+                            .copyWith(fontSize: 20.sp),
+                  ),
             SizedBox(
               width: 27.w,
             ),

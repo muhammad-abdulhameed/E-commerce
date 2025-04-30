@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
-class AppConstants {
+ class AppConstants {
+   AppConstants._();
   static const String delete = "Delete";
   static const String searchHint = "what do you search for?";
   static const String addToCart = "Add to Cart";
+  static const String baseUrl="https://ecommerce.routemisr.com";
 
   static List<Map<String, dynamic>> favoriteProducts = [
     {

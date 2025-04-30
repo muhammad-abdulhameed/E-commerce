@@ -34,12 +34,21 @@ dependencies:
   flutter_native_splash:
   readmore: ^2.2.0
   smooth_page_indicator:
-
+  dio: ^5.8.0+1
+  injectable: ^2.3.5
+  get_it:
+  dartz: ^0.10.1
+  flutter_bloc: ^9.1.0
+  shared_preferences: ^2.2.3
+  connectivity_plus: ^2.1.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints:
+  injectable_generator:
 
+  flutter_lints:
+  build_runner: ^2.3.3
+  flutter_gen:
 flutter:
   generate: true
   uses-material-design: true
@@ -54,6 +63,7 @@ flutter:
      - family: Poppins
        fonts:
          - asset: assets/fonts/Poppins-.ttf
+
 
 
 

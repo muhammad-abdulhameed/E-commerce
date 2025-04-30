@@ -1,12 +1,14 @@
 import 'package:my_ecommerce/core/resources/assets_manager.dart';
 import 'package:my_ecommerce/core/resources/color_manager.dart';
+import 'package:my_ecommerce/core/widget/custom_elevated_button.dart';
 import 'package:my_ecommerce/core/widget/home_screen_app_bar.dart';
 import 'package:my_ecommerce/features/main_layout/categories/presentation/categories_tab.dart';
 import 'package:my_ecommerce/features/main_layout/favourite/presentation/favourite_screen.dart';
 import 'package:my_ecommerce/features/main_layout/profile_tab/presentation/profile_tab.dart';
 import 'package:flutter/material.dart';
 
-import 'home/presentation/home_tab.dart';
+import 'Home/presentation/pages/home_tab.dart';
+
 
 class MainLayout extends StatefulWidget {
   const MainLayout({super.key});
@@ -23,6 +25,7 @@ class _MainLayoutState extends State<MainLayout> {
     const FavouriteScreen(),
     const ProfileTab(),
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,8 +44,10 @@ class _MainLayoutState extends State<MainLayout> {
             type: BottomNavigationBarType.fixed,
             selectedItemColor: ColorManager.primary,
             unselectedItemColor: ColorManager.white,
-            showSelectedLabels: false, // Hide selected item labels
-            showUnselectedLabels: false, // Hide unselected item labels
+            showSelectedLabels: false,
+            // Hide selected item labels
+            showUnselectedLabels: false,
+            // Hide unselected item labels
             items: [
               // Build BottomNavigationBarItem widgets for each tab
               CustomBottomNavBarItem(IconsAssets.icHome, "Home"),
@@ -66,6 +71,7 @@ class _MainLayoutState extends State<MainLayout> {
 class CustomBottomNavBarItem extends BottomNavigationBarItem {
   String iconPath;
   String title;
+
   CustomBottomNavBarItem(this.iconPath, this.title)
       : super(
           label: title,

@@ -1,8 +1,10 @@
 import 'package:my_ecommerce/core/resources/values_manager.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../core/resources/color_manager.dart';
-import '../../../../../core/resources/styles_manager.dart';
+import '../../../../../../core/resources/color_manager.dart';
+import '../../../../../../core/resources/styles_manager.dart';
+
+
 
 class CustomSectionBar extends StatelessWidget {
   final String sectionNname;

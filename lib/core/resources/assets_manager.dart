@@ -4,6 +4,7 @@ const String iconsPath = "assets/icons";
 const String svgPath = "assets/svg_images";
 
 abstract class ImageAssets {
+  static const String resetPassword="assets/images/reset password.png";
   static const String routeLogo = "$imagePath/splash_logo.png";
   static const String categoryCardImage = "$imagePath/category_card_image.png";
 

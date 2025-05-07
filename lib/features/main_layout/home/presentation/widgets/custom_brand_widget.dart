@@ -1,10 +1,15 @@
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:my_ecommerce/core/resources/assets_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:my_ecommerce/features/main_layout/home/domain/entities/BrandEntity.dart';
+
+import '../../../../../core/resources/color_manager.dart';
+import '../../../../../core/resources/styles_manager.dart';
 
 class CustomBrandWidget extends StatelessWidget {
-  const CustomBrandWidget({super.key});
-
+   CustomBrandWidget(this.brandEntity,{super.key});
+BrandEntity brandEntity;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -17,12 +22,14 @@ class CustomBrandWidget extends StatelessWidget {
             decoration: const BoxDecoration(
               shape: BoxShape.circle,
             ),
-            child: Image.asset(
-              ImageAssets.brandHomeImage,
+            child: SvgPicture.network(
+               brandEntity.logoUrl??'',//ImageAssets.brandHomeImage,
               fit: BoxFit.scaleDown,
             ),
+
           ),
         ),
+        Text(brandEntity.brandName??"mkajkjhasdkhia", style: getRegularStyle(color: ColorManager.darkBlue, fontSize: 14.sp),)
       ],
     );
   }

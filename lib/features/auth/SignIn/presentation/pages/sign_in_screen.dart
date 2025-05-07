@@ -106,7 +106,9 @@ class _SignInScreenState extends State<SignInScreen> {
                       children: [
                         const Spacer(),
                         GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.pushNamed(context, Routes.forgetPassword);
+                            },
                             child: Text(
                               'Forget password?',
                               style: getMediumStyle(color: ColorManager.white)

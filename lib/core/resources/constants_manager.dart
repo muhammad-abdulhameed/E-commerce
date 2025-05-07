@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
   static const String searchHint = "what do you search for?";
   static const String addToCart = "Add to Cart";
   static const String baseUrl="https://ecommerce.routemisr.com";
+  static const String mockBaseUrl="https://mocki.io";
 
   static List<Map<String, dynamic>> favoriteProducts = [
     {

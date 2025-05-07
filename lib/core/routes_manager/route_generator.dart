@@ -1,4 +1,5 @@
 import 'package:my_ecommerce/core/routes_manager/routes.dart';
+import 'package:my_ecommerce/features/auth/ForgetPassword/presentation/pages/forget_password_screen.dart';
 import 'package:my_ecommerce/features/auth/SignIn/presentation/pages/sign_in_screen.dart';
 import 'package:my_ecommerce/features/auth/Signup/presentation/pages/sign_up_screen.dart';
 import 'package:my_ecommerce/features/cart/cart/presentation/pages/cart_screen.dart';
@@ -27,6 +28,8 @@ class RouteGenerator {
 
       case Routes.signUpRoute:
         return MaterialPageRoute(builder: (_) => const SignUpScreen());
+      case Routes.forgetPassword:
+        return MaterialPageRoute(builder: (_) => const ForgetPassword());
       default:
         return unDefinedRoute();
     }
